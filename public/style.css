@@ -1,0 +1,25 @@
+.content {
+    font-family: Tahoma;
+}
+.marbot5 {
+    margin-bottom: 5px;
+}
+.full-width {
+    min-width: 100%;
+    max-width: 100%;
+}
+.hidden {
+    display: none;
+}
+.table thead tr th {
+    text-align: center;
+    vertical-align: middle;
+}
+.table tfoot tr th {
+    padding: 2px;
+}
+.table tbody tr td {
+    border-color: black;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
