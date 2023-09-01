@@ -3,7 +3,7 @@
 <html>
     <head>
         {{ Html::Favicon(asset("logo.png")) }}
-        <link rel="stylesheet" href="http://60.60.60.48/dapodik/dapodik_v04/public/style.css">
+        <link rel="stylesheet" href="{{ asset('style2.css') }}">
         <meta name="author" content="Firman Hidayatulloh">
         <meta name="keywords" content="SSO, Single Sign On, SMK Negeri 1 Slawi, SMKN 1 Slawi, Kab. Tegal">
         <meta name="description" content="SMKN 1 Slawi || Single Sign On">
@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap-grid.min.css" integrity="sha512-EAgFb1TGFSRh1CCsDotrqJMqB2D+FLCOXAJTE16Ajphi73gQmfJS/LNl6AsjDqDht6Ls7Qr1KWsrJxyttEkxIA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js" integrity="sha512-3dZ9wIrMMij8rOH7X3kLfXAzwtcHpuYpEgQg1OA4QAob1e81H8ntUQmQm3pBudqIoySO5j0tHN4ENzA6+n2r4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="http://60.60.60.48/dapodik/dapodik_v04/public/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="{{ asset('bower_components/jquery/dist/jquery.min.js') }}"></script>
         <title>SMKN 1 Slawi || Single Sign On</title>
         <style>
             .text-danger {color: salmon}
@@ -37,7 +37,7 @@
                                 @endif
                             >{{ $semester->nama_semester }}</option>
                         @endforeach
-                    </select>
+                    </select>e
                     <div><input type="checkbox" class="form-checkbox"> Lihat password</div>
                     <button name="submit" style="margin-top: 10px;">Log In</button>
                 {{ Form::close() }}
