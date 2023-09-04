@@ -17,9 +17,12 @@
 }
 .table tfoot tr th {
     padding: 2px;
+    text-align: center;
+    vertical-align: middle;
 }
 .table tbody tr td {
     border-color: black;
     padding-top: 3px;
     padding-bottom: 3px;
+    border-color: black;
 }
