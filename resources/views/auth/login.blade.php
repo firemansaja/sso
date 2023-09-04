@@ -37,7 +37,7 @@
                                 @endif
                             >{{ $semester->nama_semester }}</option>
                         @endforeach
-                    </select>e
+                    </select>
                     <div><input type="checkbox" class="form-checkbox"> Lihat password</div>
                     <button name="submit" style="margin-top: 10px;">Log In</button>
                 {{ Form::close() }}

@@ -15,6 +15,11 @@
                     </div>
                 </div>
                 @foreach (daftar_website_by_bypass($bypass) as $web)
+                    @php
+                        if (sesi("peran_id_str") == "Peserta Didik") {
+                            if (!website_siswa->contains($web->judul)) continue;
+                        }
+                    @endphp
                     @php $url = ($bypass == "Ya") ? $web->url . sesi('bypass') : $web->url; @endphp
                     <div class="col-md-4 col-xs-12">
                         <div class="box no-border">

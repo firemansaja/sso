@@ -5,12 +5,16 @@
 @section("title", "Daftar Pengguna Tidak Aktif")
 @section("content.header", "Daftar Pengguna Tidak Aktif")
 
+@push('style')
+    .table tbody tr td {padding-top: 3px; padding-bottom: 3px;}
+@endpush
+
 @push('content')
     <div class="row">
         <div class="col-xs-12">
             <div class="box no-border">
                 <div class="box-body table-responsive">
-                    <table class="table" id="pengguna">
+                    <table class="table table-striped" id="pengguna">
                         <thead class="bg-navy">
                             <tr>
                                 <th rowspan="2">No</th>
