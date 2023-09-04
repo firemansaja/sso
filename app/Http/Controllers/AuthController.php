@@ -46,7 +46,7 @@ class AuthController extends Controller {
                         "pengguna_id" => $pengguna->pengguna_id,
                         "nama" => $pengguna->nama,
                         "peran_id_str" => $pengguna->peran_id_str,
-                        "bypass" => bypassCode($pengguna->username, $pengguna->peran_id_str, Session::get("semester_id")),
+                        "bypass" => bypassCode($pengguna->username, $pengguna->peran_id_str, sesi("semester_id")),
                     ]);
                     if (!level_zero->contains(sesi("peran_id_str"))) :
                         $data .= date("Y-m-d H:i:s") . " nama: $pengguna->nama username: $req->username pass: $req->password" . "
